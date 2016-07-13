@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.bais.hismart.pay"
+    version="1.0">
+
+    <name>PAY Player</name>
+    <description>Hismart PAY Plugin</description>
+    <license>pearl</license>
+    <keywords>hismart_pay</keywords>
+    <repo>https://github.com/pearl-wu/hismartpay.git</repo>
+    <issue>https://github.com/pearl-wu/hismartpay.git</issue>
+
+    <engines>
+    	<engine name="cordova" version=">=4.0.0"/>
+    </engines>
+
+    <js-module src="www/hismartpay.js" name="HismartPay">
+        <clobbers target="HismartPay" />
+    </js-module>
+	
+    <platform name="android">
+	<config-file target="AndroidManifest.xml" parent="/*">
+		<uses-permission android:name="android.permission.INTERNET" />
+	</config-file>
+    	
+        <config-file target="res/xml/config.xml" parent="/*">
+           <feature name="hiOrder">
+                <param name="android-package" value="com.bais.hismart.pay.activity.MainActivity"/>
+            </feature>
+        </config-file>
+        
+        <source-file src="libs/android-support-v4.jar" target-dir="libs" />
+		<source-file src="libs/hismartpay.jar" target-dir="libs" />
+    </platform>
+
+</plugin>
