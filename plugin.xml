@@ -29,9 +29,8 @@
                 <param name="android-package" value="com.bais.hismart.pay.activity.MainActivity"/>
             </feature>
         </config-file>
-        
-        <source-file src="libs/android-support-v4.jar" target-dir="libs" />
-		<source-file src="libs/hismartpay.jar" target-dir="libs" />
+       
+	<source-file src="libs/hismartpay.jar" target-dir="libs" />
     </platform>
 
 </plugin>
