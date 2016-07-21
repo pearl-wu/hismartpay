@@ -3,9 +3,9 @@ var exec = require("cordova/exec");
 module.exports = {
 
     ENTER_OPTIONS: {
-		partner_order_no: "",
+	partner_order_no: "",
         subject: "HIS_TEST_TV",
-        price: "0.1", 
+        price: "0.1",
         partner_notify_url: "http://pay.youjoy.tv/static/new_sdk/hisense.php"
     },
 
